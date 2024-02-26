@@ -38,18 +38,30 @@ def eliminar_menor(numero):
 
    return nuevo_numero
 
-numero = int(input("Ingrese un número mayor a 1000: "))
-
-if numero<1000:
-   print("EL número no es mayor a 1000. Ejecute de nuevo.")
-else:
-   print("Se ha ingresado: ",numero)
-   menorDigito = menor_digito(numero)
-   print("El menor digito es: ",menorDigito)
-   nuevo_numero= eliminar_menor(numero)
-   print("El nuevo numero es ", nuevo_numero)
+# numero = int(input("Ingrese un número mayor a 1000: "))
 
 
+# if numero<1000:
+#    print("EL número no es mayor a 1000. Ejecute de nuevo.")
+# else:
+#    print("Se ha ingresado: ",numero)
+#    menorDigito = menor_digito(numero)
+#    print("El menor digito es: ",menorDigito)
+#    nuevo_numero= eliminar_menor(numero)
+#    print("El nuevo numero es ", nuevo_numero)
+
+flag = True
+
+while(flag):
+   numero = int(input("Ingrese un número mayor a 1000: "))
+   if(numero>1000):
+      flag = False
+
+print("Se ha ingresado: ",numero)
+menorDigito = menor_digito(numero)
+print("El menor digito es: ",menorDigito)
+nuevo_numero= eliminar_menor(numero)
+print("El nuevo numero es ", nuevo_numero)
 
 #Comentario de Edward: También se puede hacer con arrays o string me parece y sale más rápido
 #Pero me parece que para pc1 aún no ven eso.
